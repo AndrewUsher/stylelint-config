@@ -1,0 +1,22 @@
+{
+  "name": "@drewster/eslint-config",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrewUsher/stylelint-config.git"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "@drewster/eslint-config": "1.0.2",
+    "generate-changelog": "1.8.0",
+    "prettier": "1.19.1"
+  },
+  "scripts": {
+
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
+  }
+}
